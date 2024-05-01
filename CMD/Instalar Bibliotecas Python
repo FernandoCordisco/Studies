@@ -1,0 +1,16 @@
+Instalar Bibliotecas Python
+
+sudo python3 -m pip install (nome da biblioteca):
+instala a biblioteca desejada
+	
+sudo apt install python3:
+instala o python 3
+
+sudo apt install python3-pip:
+instala o pip
+
+python3 --version:
+versão do python
+
+pip3 --version:
+versão do pip

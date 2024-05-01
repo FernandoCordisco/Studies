@@ -1,0 +1,7 @@
+Comandos Linux DPKG
+
+Serve para instalar programas baixados
+
+-----------------------------------------------------------
+
+sudo dpkg -i (nome do programa)
