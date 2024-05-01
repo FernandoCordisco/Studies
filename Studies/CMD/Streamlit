@@ -1,0 +1,7 @@
+Streamlit
+
+python3 -m streamlit run (nome do arquivo py):
+Cria a URL para acesso ao site
+
+
+

@@ -1,0 +1,45 @@
+VIM
+
+Modo de insert:
+i
+
+Modo visual:
+v
+
+Modo normal:
+ESC
+
+Modo console:
+:
+
+Copiar:
+Segurar Shift e selecionar o texto
+Modo visual -> y
+
+Colar:
+Scroll do mouse
+Modo visual -> p
+
+Deletar linha:
+Modo visual -> d
+
+Procurar texto:
+Modo visual -> /
+
+Sair sem salvar:
+q!
+
+Sair salvando:
+wq
+
+Salvar:
+w
+
+Editar no final da linha:
+Shift + a
+
+vai para o final da linha:
+Shift + $
+
+Desfazer:
+Modo normal -> u
