@@ -1,7 +1,0 @@
-Comandos Linux Desinstalar
-
-dpkg --list:
-Lista os programas
-
-sudo apt-get --purge remove (nome do programa):
-Remover programa
