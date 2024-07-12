@@ -1,0 +1,22 @@
+Ambiente Virtual 
+
+Acessar a pasta pelo terminal
+
+rodar o comando:
+
+Criar e ativar o ambiente:
+
+venv NomePasta
+
+Windows: NomePasta\Scrips\activate
+Linux: source NomePasta/bin/activate
+
+
+Instalação de bibliotecas:
+
+pip install NomeBiblioteca
+pip install -r requirements.txt (Instala bibliotecas no arquivo)
+
+Visualizar bibliotecas e versão:
+
+pip freeze
