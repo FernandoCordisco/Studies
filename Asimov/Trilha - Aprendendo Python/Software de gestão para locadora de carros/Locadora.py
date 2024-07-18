@@ -1,4 +1,4 @@
-#Variáveis
+#Variáveis 
 carros = [
 ['Fiat Uno', '80'],
 ['Volkswagen Gol', '90'],
@@ -12,8 +12,7 @@ carros = [
 ['Chevrolet Tracker', '210'],
 ]
 
-resposta = int()
-loop = bool()
+carros_alugados = list()
 
 #Funções
 def mostrar_carros(carros):
@@ -22,65 +21,120 @@ def mostrar_carros(carros):
     for carro, valor in carros:
         print(f"[{n}] -> {carro} - R$ {valor} por dia.")
         n+=1
+
+def respostas(opcoes):
+
+    loop = True
+    while loop:
+
+        resposta = int(input('Resposta: '))
+        print('')
+        if resposta in opcoes:
+            loop = False
     
-def home(resposta, loop):
+    return resposta
+
+def home():
     print('-'*50)
     print('Bem vindo a locadora de carros!')
     print('-'*50)
-    print('')
-    print('O que deseja fazer?\n')
+    print(f'\nO que deseja fazer?\n')
     print(f'0 -> Mostrar portifólio | 1 -> Alugar um carro | 2 -> Devolver um carro')
     
-    opcoes = '0-1-2'
-    loop = True
-    while loop:
+    resposta = respostas([0,1,2])
 
-        resposta = input('Resposta: ')
-        print('')
-        if resposta in opcoes:
-            loop = False
+    if resposta == 0:
+        portifolio()
 
-    if resposta == '0':
-        portifolio(resposta, loop)
-'''    
-    elif resposta == '1':
-        alugar_carro()
+    elif resposta == 1:
+        alugar_carro(carros, carros_alugados)
 
-    elif resposta == '2':
-        devolver_carro()
-'''
 
-def portifolio(resposta, loop):
+    elif resposta == 2:
+        devolver_carro(carros_alugados)
+
+
+def portifolio():
     print('-'*50)
     mostrar_carros(carros)
     print('-'*50) 
-    print('')
-    print('0 -> CONTINUAR | 1 -> SAIR')
+    print(f'\n0 -> CONTINUAR | 1 -> SAIR')
 
-    opcoes = '0-1'
-    loop = True
+    resposta = respostas([0, 1])
 
-    while loop:
-        resposta = input('Resposta: ')
-        print('')
-        if resposta in opcoes:
-            loop = False
+    if resposta == 0:
+        home()
 
-    if resposta == '0':
-        home(resposta, loop)
-
-    elif resposta == '1':
+    elif resposta == 1:
         pass
 
     
-def alugar_carro():
+def alugar_carro(carros, carros_alugados):
     print('-'*50)
     mostrar_carros(carros)
     print('-'*50) 
-    print('')
-    print('Escolha o código do carro')
+    print(f'\nEscolha o código do carro para alugar:')
+    
+    opcoes = list()
+    n = 0
+    for _ in carros:
+        opcoes.append(n)
+        n +=1
 
-#def devolver_carro():
+    resposta1 = respostas(opcoes) 
+    
+    carro_selecionado = carros.pop(resposta1)
+    carro = carro_selecionado[0]
+    valor = int(carro_selecionado[1])
 
+    dias_alugado = int(input(f'Quantos dias deseja alugar o carro? \nResposta: '))
 
-home(resposta, loop)
+    valor_total = float(valor * dias_alugado)
+
+    print(f'\nVocê deseja alugar o carro {carro}, por {dias_alugado} dias no valor de R$ {valor_total:.2f}?')
+
+    print('\nDeseja alugar? - 0 -> SIM | 1 -> NÃO')
+    resposta = respostas([0, 1])
+
+    if resposta == 0:
+        carros_alugados.append([carro, valor ,valor_total])
+        carro_selecionado.clear()
+        home()
+
+    if resposta == 1:
+        carros.insert(resposta1,[carro, valor])
+        carro_selecionado.clear()
+        home()
+
+def devolver_carro(carros_alugados):
+    print('----- CARROS ALUGADOS -----')
+    n = 0 
+    for carro, valor, valor_total in carros_alugados:
+        print(f"[{n}] -> {carro} - R$ {valor_total}.")
+        n+=1
+
+    print(f'\nEscolha o código do carro para devolver:')
+
+    if not carros_alugados:
+        print(f'\nSem carros para devolução!\n')
+    else:
+           
+        opcoes = list()
+        n = 0
+        for _ in carros_alugados:
+            opcoes.append(n)
+            n +=1
+
+        resposta = respostas(opcoes) 
+
+        carro_selecionado = carros_alugados.pop(resposta)
+        carro = carro_selecionado[0]
+        valor = int(carro_selecionado[1])
+        carros.append([carro, valor])
+        carro_selecionado.clear()
+        
+    home()
+
+#Main
+
+home()
