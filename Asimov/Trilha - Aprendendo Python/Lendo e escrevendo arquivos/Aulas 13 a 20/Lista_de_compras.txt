@@ -11,3 +11,5 @@ farinha
 fermento
 farinha
 fermento
+banana
+banana
