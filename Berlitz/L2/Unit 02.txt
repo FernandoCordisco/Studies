@@ -1,0 +1,13 @@
+Unit 02 
+
+The train from Baltimore arrives on track 6 at 10:05 a.m
+
+=========================================================
+
+Dictionary
+
+Arrives on: Chega à / Chega na
+Track: Linha
+At: As / No
+Leaves from: Sai da
+Arrives in: Chega em
