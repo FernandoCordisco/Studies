@@ -1,7 +1,7 @@
 <?xml version="1.0" ?><catalogo>
    <livro id="bk101">
-      <autor>Soares, Adriano</autor>
-      <titulo>XML Developer's Guide</titulo>
+      <autor>Gambardella, Matthew</autor>
+      <titulo>Vilela, Fernando</titulo>
       <genero>Computer</genero>
       <preco>44.95</preco>
       <data_publicacao>2000-10-01</data_publicacao>
