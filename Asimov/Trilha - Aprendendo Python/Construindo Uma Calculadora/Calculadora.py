@@ -1,7 +1,6 @@
 import os
 import time
 import sys
-import curses
 
 def informar_numero():
     n1 = float(input('Primeiro número: '))
@@ -78,5 +77,4 @@ def escolha_continuar():
         print('Opção inválida. Escolha novamente.')
         escolha_continuar()
 
-curses.
 escolha_de_operacao()
