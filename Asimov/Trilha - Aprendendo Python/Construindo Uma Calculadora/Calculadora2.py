@@ -10,7 +10,7 @@ operations = {
 }
 
 while True:
-    os.system('cls' if os.name == 'nt' else 'clear')
+    os.system('cls' if os.name == 'nt' else 'clear')   
     i = 0
     for op, name in operations.items():
         print(i, ":", name)

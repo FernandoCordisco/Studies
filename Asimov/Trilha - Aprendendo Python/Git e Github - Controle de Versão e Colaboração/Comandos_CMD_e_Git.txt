@@ -1,0 +1,39 @@
+
+======================
+🖥️ Comandos CMD (Windows)
+======================
+
+dir                  -> Lista arquivos e pastas do diretório atual
+cd                   -> Muda de diretório (cd .. volta uma pasta)
+cls                  -> Limpa a tela do terminal
+mkdir nome           -> Cria uma nova pasta
+del nome             -> Deleta um arquivo
+rmdir nome           -> Remove uma pasta vazia
+echo texto           -> Exibe uma mensagem no terminal
+exit                 -> Fecha o terminal
+copy arquivo destino -> Copia um arquivo
+move arquivo destino -> Move/renomeia um arquivo
+ipconfig             -> Mostra as configurações de rede
+ping endereço        -> Testa conexão com um servidor
+tasklist             -> Mostra todos os processos em execução
+taskkill /PID n      -> Encerra um processo pelo ID
+
+======================
+🧬 Comandos Git
+======================
+
+git init              -> Inicia um repositório Git
+git clone URL         -> Clona um repositório remoto
+git status            -> Mostra o estado atual dos arquivos
+git add nome          -> Adiciona arquivo à staging area
+git add .             -> Adiciona todos os arquivos modificados
+git commit -m "msg"   -> Salva mudanças com uma mensagem
+git push              -> Envia commits para o repositório remoto
+git pull              -> Atualiza o repositório local com o remoto
+git log               -> Mostra histórico de commits
+git branch            -> Lista os branches existentes
+git checkout nome     -> Muda para um branch
+git checkout -b nome  -> Cria e muda para um novo branch
+git merge nome        -> Junta um branch ao atual
+git reset --hard      -> Reseta tudo para o último commit
+git stash             -> Salva alterações não commitadas temporariamente
