@@ -1,0 +1,20 @@
+React
+
+Repositório do curso: https://github.com/matheusbattisti/curso_react
+
+-----------------------------------------------------------------------
+
+React Comandos:
+
+Usando Create React App (CRA):
+npx create-react-app nome-do-projeto
+cd nome-do-projeto
+npm start
+
+Usando Vite (mais leve e rápido):
+npm create vite@latest nome-do-projeto -- --template react
+cd nome-do-projeto
+npm install
+npm run dev
+
+npm run build
