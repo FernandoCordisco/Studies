@@ -7,9 +7,11 @@ import FirstComponent from './components/FirstComponent.jsx'
 import TempleteExpressions from './components/TemplateExpressions.jsx'
 import MyComponents from './components/MyComponents.jsx'
 import Events from './components/Events.jsx'
+import Challenge from './components/Challene.jsx'
 
 // Style (css)
 import './App.css'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,6 +23,7 @@ function App() {
      <TempleteExpressions/>
      <MyComponents/>
      <Events/>
+     <Challenge/>
     </>
   )
 }
