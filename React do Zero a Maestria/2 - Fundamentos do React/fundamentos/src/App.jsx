@@ -1,6 +1,12 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+
+// Components
+import FirstComponent from './components/FirstComponent.jsx'
+import TempleteExpressions from './components/TemplateExpressions.jsx'
+
+// Style (css)
 import './App.css'
 
 function App() {
@@ -9,6 +15,8 @@ function App() {
   return (
     <>
      <h1>Fundamentos React</h1>
+     <FirstComponent/>
+     <TempleteExpressions/>
     </>
   )
 }
